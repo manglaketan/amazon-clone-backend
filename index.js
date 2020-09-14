@@ -32,7 +32,8 @@ app.post("/payments/create", async (request, response) => {
 });
 
 // - Listen
-exports.api = functions.https.onRequest(app);
+// exports.api = functions.https.onRequest(app);
+app.listen(process.env.PORT || 3000, () => console.log("Server Started"));
 
 //Example Endpoint
 // http://localhost:5001/clone-a8a3b/us-central1/api
